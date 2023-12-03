@@ -47,6 +47,11 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  security:
+    resourceserver:
+      jwt:
+        issuer-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}
+        jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
 logging:
   level:
     #    root: DEBUG
@@ -80,3 +85,10 @@ auth:
     /auth/**
 services:
   custom-svc: http://localhost:8081
+keycloak-client:
+  server-url: http://keycloak.udptest.cloudns.nz
+  realm: MPBE
+  client-id: ${CLIENT_ID_KEYCLOAK:client_id}
+  client-secret: ${CLIENT_SECRET_KEYCLOAK:secret}
+  issuer-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}
+  auth-url: /realms/${keycloak-client.realm}/protocol/openid-connect/token
