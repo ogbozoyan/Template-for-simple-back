@@ -9,5 +9,25 @@
       "name": "auth.whitelist",
       "type": "java.lang.String",
       "description": "Authentication whitelist."
+    },
+    {
+      "name": "spring.security.resourceserver.jwt.issuer-uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.security.resourceserver.jwt.issuer-uri."
+    },
+    {
+      "name": "spring.security.resourceserver.jwt.jwk-set-uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.security.resourceserver.jwt.jwk-set-uri."
+    },
+    {
+      "name": "keycloak-client.client-secret",
+      "type": "java.lang.String",
+      "description": "Keycloak client secret"
+    },
+    {
+      "name": "keycloak-client.auth-url",
+      "type": "java.lang.String",
+      "description": "Description for keycloak-client.auth-url."
     }
   ] }
