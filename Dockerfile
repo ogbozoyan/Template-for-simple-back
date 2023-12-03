@@ -1,6 +1,6 @@
 FROM maven:3.8.5-openjdk-18-slim as build-deps
 WORKDIR /usr/src/app
-COPY . ./
+COPY src/test/java/com/og/templateback ./
 RUN mvn clean package
 
 FROM openjdk:18-slim-buster as base
